@@ -1,0 +1,11 @@
+.one-column{
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "column";
+    grid-template-rows: auto 1fr;
+}
+
+.column{
+    grid-area:column
+}
