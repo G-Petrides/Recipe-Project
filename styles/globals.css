@@ -1,3 +1,12 @@
+:root{
+  --background: #1f1e1b;
+  --table-background: #2b2a26;
+  --primary: #f1af3d;
+  --border-radius: 5px;
+  --box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+
 html,
 body {
   padding: 0;
@@ -8,4 +17,27 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  background: var(--primary);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: var(--box-shadow);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  height:fit-content;
+  width:fit-content;
+}
+
+button:hover {
+  background: #f1af3d;
+  cursor: pointer;
+  transform:translate(-1px,-1px);
+}
+
+button:after {
+  background: var(--background);
+  color: var(--primary);
+  transform:translate(1px,1px);
 }

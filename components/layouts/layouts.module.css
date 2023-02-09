@@ -7,5 +7,6 @@
 }
 
 .column{
-    grid-area:column
+    grid-area:column;
+    background:var(--background);
 }

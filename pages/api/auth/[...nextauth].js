@@ -13,6 +13,8 @@ export const authOptions = {
     callbacks: {
         async signIn({ account, profile }) {
             if (account.provider === "google") {
+                //Gets list of authorized users from MongoDB and checks if profile email is in list.
+                //Provides a way to limit access to just people with approved emails.
                 let authorized = await mongoI.findOne("authorized-users" , {id:"authorized-users"})
                 return profile.email_verified && authorized.emails.indexOf(profile.email) !== -1
             }
